@@ -8,14 +8,16 @@ public class Programm {
                 new Cat()
         };
 
-        Plate plate = new Plate(100);
+        Plate plate = new Plate(65);
+        System.out.println(plate);
+        System.out.println("---------------------");
 
         for (int i = 0; i < cats.length; i++) {
             boolean is_eated = cats[i].eat(plate.getFood());
 
             if (is_eated) {
                 plate.setFood(plate.getFood() - cats[i].getAppetite());
-                
+
                 System.out.println(String.format(
                         "Кот \"%s\" поел, в тарелке осталось %d единиц еды!", cats[i].getName(), plate.getFood()));
             } else {

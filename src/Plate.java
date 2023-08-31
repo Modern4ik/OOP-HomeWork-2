@@ -6,7 +6,7 @@ public class Plate {
     }
 
     public Plate(int food) {
-        this.food = food;
+        this.food = checkFood(food);
     }
 
     public int getFood() {
@@ -20,6 +20,13 @@ public class Plate {
     public void addFood(int food) {
         this.food = this.food + food;
     }
+
+    private int checkFood(int food){
+        if (food < 0)
+            return 0;
+
+        return food;
+    }   
 
     @Override
     public String toString() {

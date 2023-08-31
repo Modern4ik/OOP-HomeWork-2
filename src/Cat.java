@@ -12,8 +12,9 @@ public class Cat {
     }
 
     public Cat(String name, int appetite) {
-        this.name = name;
-        this.appetite = appetite;
+        
+        this.name = checkName(name);
+        this.appetite = checkAppetite(appetite);
     }
 
     public int getAppetite() {
@@ -40,6 +41,22 @@ public class Cat {
 
         return false;
     }
+
+    private String checkName(String name){
+        if (name.length() < 2){
+            return "Неизвестный кот";
+        }
+
+        return name;
+    }
+
+    private int checkAppetite(int appetite){
+        if (appetite < 10){
+            return 10;
+        }
+
+        return appetite;
+    }   
 
     @Override
     public String toString() {
