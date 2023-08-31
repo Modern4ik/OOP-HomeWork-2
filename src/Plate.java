@@ -1,5 +1,5 @@
 public class Plate {
-    private int food;
+    private int food; // кол-во еды в тарелке
 
     public Plate() {
         this(0);

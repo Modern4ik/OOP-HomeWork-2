@@ -1,7 +1,7 @@
 public class Cat {
-    private String name;
-    private int appetite;
-    private String fullness = "Голодный";
+    private String name; // Кличка кота
+    private int appetite; // Аппетит кота
+    private String fullness = "Голодный"; // Сытость кота
 
     public Cat() {
         this("Неизвестный кот");
